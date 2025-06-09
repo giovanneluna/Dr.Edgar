@@ -26,7 +26,7 @@
   font-size: 27px;
   width: 90%;
   padding: 5px 0px 14px;
-  color: #3d505f;
+  color: #c96332;
   font-weight: 200;
 }
 
@@ -57,7 +57,7 @@
   width: 155px;
   font-size: 17px;
   height: 39px;
-  background: #3d505f;
+  background: #c96332;
   border: none;
   border-radius: 8px;
   color: #ffffff;
@@ -100,13 +100,13 @@
   text-align: center;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #3d505f;
+  color: #c96332;
 }
 
 #form-consulta button {
   width: 100%;
   height: 50px;
-  background: #3d505f;
+  background: #c96332;
   border: none;
   border-radius: 10px;
   color: white;

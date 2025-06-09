@@ -1,5 +1,5 @@
 .container-section-especialidade {
-  background: linear-gradient(0deg, #4f5d6a, #3d505f);
+  background: linear-gradient(0deg, #f8fafc, #c96332);
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -7,7 +7,7 @@
 }
 
 .titulo-sintomas {
-  color: #3d505f;
+  color: #c96332;
   font-weight: 300;
   line-height: 32px;
   margin-top: 20px;
@@ -20,7 +20,7 @@
   font-size: 35px;
   line-height: 37px;
   font-weight: 300;
-  color: #3d505f;
+  color: #c96332;
 }
 
 .div-text-especialidade h2:last-child {
@@ -45,7 +45,7 @@
 #card-color {
   flex-direction: column;
   display: flex;
-  background: linear-gradient(45deg, #f4f4f4, #97aab833);
+  background: linear-gradient(45deg, #f8fafc, rgba(217, 145, 111, 0.2));
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -157,7 +157,7 @@
   border-radius: 31px;
   border: 1px solid rgb(159 159 159 / 40%);
   background: transparent;
-  color: #3d505f;
+  color: #c96332;
   font-size: 14px;
   cursor: pointer;
   padding: 0px 20px;
@@ -168,7 +168,7 @@
   border-radius: 31px;
   border: none;
   background: #3a485900;
-  color: #3d505f;
+  color: #c96332;
   border: 1px solid #00000038;
   font-size: 17px;
   cursor: pointer;
@@ -200,7 +200,7 @@
 }
 
 .containter-img-geral h1 {
-  color: #3d505f;
+  color: #c96332;
   font-size: 28px;
   font-weight: 300;
   margin-top: 40px;
@@ -358,7 +358,7 @@
 
 /* Seção Premium de Especialidades */
 .container-section-especialidade-premium {
-  background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #3d505f 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #c96332 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -390,7 +390,7 @@
 
 .especialidade-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   color: white;
   padding: 12px 32px;
   border-radius: 50px;
@@ -427,7 +427,7 @@
 }
 
 .highlight-especialidade {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -522,7 +522,7 @@
 .icon-circle {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -563,7 +563,7 @@
   font-weight: 500;
   font-size: 15px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   border: none;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -618,7 +618,7 @@
 }
 
 .cta-button-premium {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   border: none;
   border-radius: 50px;
   padding: 16px 40px;

@@ -38,7 +38,7 @@
 .container-text-banner h2 {
   font-size: 30px;
   font-style: italic;
-  color: #3d505f;
+  color: #c96332;
   font-weight: 500;
 }
 
@@ -66,7 +66,7 @@
 }
 
 #second-button a {
-  color: #4f5d6a;
+  color: #c96332;
   font-weight: 800;
 }
 
@@ -77,7 +77,7 @@
 .div-button-banner button {
   padding: 5px 13px;
   height: 35px;
-  background: #3d505f;
+  background: #c96332;
   border: none;
   border-radius: 34px;
   display: none;
@@ -92,7 +92,7 @@
 .botao-pulse {
   padding: 0px 17px;
   cursor: pointer;
-  background: #4f5d6a;
+  background: #c96332;
   height: 35px;
   border: none;
   border-radius: 35px;

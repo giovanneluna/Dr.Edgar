@@ -1,6 +1,6 @@
 /* Estilos para a seção de avaliações */
 .avaliacoes-section {
-  background-color: #97aab8;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
   padding: 60px 0;
   width: 100%;
   overflow: hidden;
@@ -192,6 +192,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -203,7 +204,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3c505e;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, rgba(201, 99, 50, 0.05) 100%);
   width: 100%;
   box-sizing: border-box;
 }
@@ -218,7 +219,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin: 0;
-  background-image: linear-gradient(to right, #fff, #3c505e);
+  background-image: linear-gradient(to right, #c96332, #d9916f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -227,13 +228,13 @@
 
 .div-text-depoimentos h3 {
   font-size: 30px;
-  color: #fff;
+  color: #2d3748;
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
 
 .div-text-depoimentos p {
-  color: #fff;
+  color: #4a5568;
   font-style: italic;
   max-width: 543px;
   margin: 0 auto;
@@ -243,7 +244,7 @@
 
 .div-text-depoimentos .span-strong {
   font-weight: 700;
-  background-image: linear-gradient(to right, #fff, #90adc2);
+  background-image: linear-gradient(to right, #c96332, #d9916f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -256,7 +257,7 @@
 
 .agendar-button {
   padding: 12px 30px;
-  background: #3c505e;
+  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
   border: none;
   margin-top: 9px;
   border-radius: 31px;
@@ -264,7 +265,7 @@
 }
 
 .agendar-button:hover {
-  background: #556a79;
+  background: linear-gradient(135deg, #b85229 0%, #c8835e 100%);
   transform: translateY(-2px);
 }
 

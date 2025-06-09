@@ -11,7 +11,7 @@
   line-height: 42px;
   margin-top: 15px;
   font-weight: 200;
-  color: #3d505f;
+  color: #c96332;
 }
 
 .negrito {
@@ -19,7 +19,7 @@
 }
 
 .span-profissao {
-  background: #3d505f;
+  background: #c96332;
   padding: 3px 21px;
   border-radius: 25px;
   color: white;
@@ -130,7 +130,7 @@
   .div-text-conheca h2 {
     font-size: 30px;
     line-height: 42px;
-    color: #3d505f;
+    color: #c96332;
   }
 
   .div-text-conheca p {
@@ -142,7 +142,7 @@
 }
 
 .img-conheca-desktop {
-  background: #3d505f;
+  background: #c96332;
   border-radius: 10px;
   height: 100%;
 }

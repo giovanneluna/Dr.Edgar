@@ -62,7 +62,7 @@ header {
 
 .nav-link:hover:after {
   width: 100%;
-  background-color: #3d505f;
+  background-color: #c96332;
 }
 
 .nav-menu-icons {
@@ -83,14 +83,14 @@ header {
 }
 
 .menu-button:hover {
-  background: #3d505f;
+  background: #c96332;
   color: white;
 }
 
 .button-header {
   padding: 0px 17px;
   cursor: pointer;
-  background: #4f5d6a;
+  background: #c96332;
   border: none;
   border-radius: 35px;
   height: 35px;
@@ -115,6 +115,7 @@ header {
 }
 
 @media screen and (min-width: 600px) {
+
   /* No desktop, remove o filtro dos ícones */
   .icone-branco {
     filter: none;
@@ -172,7 +173,7 @@ header {
     border: 1px solid white;
     border-radius: 8px;
     height: 35px;
-    background: #3d505f;
+    background: #c96332;
     border: none;
     border-radius: 35px;
   }
