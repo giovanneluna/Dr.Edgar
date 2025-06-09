@@ -355,3 +355,376 @@
   font-size: 15px;
   font-weight: 200;
 }
+
+/* Seção Premium de Especialidades */
+.container-section-especialidade-premium {
+  background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #3d505f 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-section-especialidade-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.especialidade-premium-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.especialidade-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.especialidade-premium-title {
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 400;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlight-especialidade {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+.especialidade-premium-subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.especialidade-premium-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.especialidade-premium-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.especialidade-premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-premium-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-premium-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.especialidade-premium-card:hover .card-premium-image-container img {
+  transform: scale(1.1);
+}
+
+.card-premium-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.especialidade-premium-card:hover .card-premium-overlay {
+  opacity: 1;
+}
+
+.card-premium-content {
+  padding: 30px 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-premium-icon {
+  position: absolute;
+  top: -25px;
+  left: 25px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.card-premium-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin: 25px 0 8px 0;
+  line-height: 1.3;
+}
+
+.card-premium-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.card-premium-description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.card-premium-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.card-premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.card-premium-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.card-premium-button svg {
+  transition: transform 0.3s ease;
+}
+
+.card-premium-button:hover svg {
+  transform: translateX(3px);
+}
+
+.especialidade-premium-cta {
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.cta-content h3 {
+  font-size: clamp(24px, 4vw, 32px);
+  color: white;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.cta-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.cta-button-premium {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.cta-button-premium a {
+  color: white;
+  text-decoration: none;
+}
+
+.cta-button-premium:hover a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+  .especialidade-premium-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-section-especialidade-premium {
+    padding: 60px 0;
+  }
+
+  .especialidade-premium-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .especialidade-premium-card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card-premium-content {
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .card-premium-icon {
+    position: static;
+    margin: 0 auto 20px auto;
+  }
+
+  .card-premium-title,
+  .card-premium-subtitle,
+  .card-premium-description {
+    text-align: center;
+  }
+
+  .card-premium-button {
+    align-self: center;
+    margin: 20px auto 0 auto;
+  }
+
+  .especialidade-premium-cta {
+    margin-top: 60px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .especialidade-premium-header {
+    margin-bottom: 60px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .especialidade-badge {
+    font-size: 12px;
+    padding: 10px 28px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .especialidade-premium-title {
+    font-size: 24px;
+  }
+
+  .especialidade-premium-subtitle {
+    font-size: 16px;
+  }
+
+  .card-premium-title {
+    font-size: 20px;
+  }
+
+  .cta-button-premium {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+}

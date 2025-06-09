@@ -260,6 +260,7 @@
 }
 
 @media (max-width: 576px) {
+
   .cards-mod,
   .cards-row:nth-child(2) .cards-mod {
     width: calc(100% - 20px);
@@ -294,5 +295,384 @@
 
   .cards-row-four {
     padding: 0 4%;
+  }
+}
+
+/* === NOVA SEÇÃO TRATAMENTOS PROFISSIONAIS === */
+.tratamentos-profissionais-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tratamentos-profissionais-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at top left, rgba(61, 80, 95, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(93, 140, 161, 0.05) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.tratamentos-profissionais-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.tratamentos-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tratamentos-title {
+  font-size: clamp(29px, 6vw, 48px);
+  font-weight: 300;
+  color: #2d3748;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.tratamentos-highlight {
+  background: linear-gradient(135deg, #3d505f 0%, #5d8ca1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.tratamentos-subtitle {
+  font-size: clamp(16px, 3vw, 20px);
+  color: #718096;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.tratamentos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.tratamentos-row {
+  display: grid;
+  gap: 30px;
+}
+
+.tratamentos-row-top {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tratamentos-row-bottom {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: calc(75% - 15px);
+  margin: 0 auto;
+}
+
+.tratamento-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow:
+    0 10px 30px rgba(61, 80, 95, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.tratamento-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3d505f 0%, #5d8ca1 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tratamento-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 50px rgba(61, 80, 95, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tratamento-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3d505f 0%, #5d8ca1 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.tratamento-card:hover .card-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(61, 80, 95, 0.3);
+}
+
+.card-badge {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(203, 213, 224, 0.5);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-title {
+  font-size: clamp(18px, 3vw, 21px);
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card-description {
+  font-size: 15px;
+  color: #718096;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-description strong {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.card-button {
+  background: linear-gradient(135deg, #3d505f 0%, #5d8ca1 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  font-family: inherit;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(61, 80, 95, 0.3);
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+.card-button:active {
+  transform: translateY(0);
+}
+
+.card-button svg {
+  transition: transform 0.3s ease;
+}
+
+.card-button:hover svg {
+  transform: translateX(2px);
+}
+
+.tratamentos-cta {
+  background: linear-gradient(135deg, #3d505f 0%, #5d8ca1 100%);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tratamentos-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tratamentos-cta h3 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  color: white;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.tratamentos-cta p {
+  font-size: clamp(16px, 3vw, 18px);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.cta-button-principal {
+  background: white;
+  color: #3d505f;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+}
+
+.cta-button-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background: #f8fafc;
+}
+
+.cta-button-principal:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+  .tratamentos-row-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tratamentos-row-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: calc(66.66% - 10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tratamentos-profissionais-section {
+    padding: 60px 0;
+  }
+
+  .tratamentos-profissionais-container {
+    padding: 0 15px;
+  }
+
+  .tratamentos-header {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .card-badge {
+    margin-left: 20px
+  }
+
+  .tratamentos-grid {
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .tratamentos-row-top,
+  .tratamentos-row-bottom {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  .tratamento-card {
+    padding: 25px 20px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-header {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tratamentos-cta {
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .cta-button-principal {
+    padding: 16px 35px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tratamento-card {
+    padding: 20px 15px;
+  }
+
+  .card-button {
+    padding: 12px 18px;
+    font-size: 13px;
   }
 }
