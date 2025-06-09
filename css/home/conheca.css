@@ -1,0 +1,155 @@
+.container-section-conheca {
+  background-color: rgb(217 217 217 / 58%);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 50px 0px 40px;
+}
+
+.div-text-conheca h2 {
+  font-size: 30px;
+  line-height: 42px;
+  margin-top: 15px;
+  font-weight: 200;
+  color: #3d505f;
+}
+
+.negrito {
+  font-weight: 600;
+}
+
+.span-profissao {
+  background: #3d505f;
+  padding: 3px 21px;
+  border-radius: 25px;
+  color: white;
+  font-size: 13px;
+}
+
+.div-text-conheca h2:last-child {
+  font-size: 25px;
+}
+
+#conheca {
+  font-size: 15px;
+  color: var(--color1);
+  /* padding: 55px 0px; */
+  background-color: #fff;
+}
+
+.div-text-conheca h3 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#text-conheca {
+  color: var(--color-text-2);
+}
+
+.img-section-conheca {
+  width: 90%;
+  border-radius: 8px;
+}
+
+.img-section-conheca img {
+  height: 302px;
+}
+
+.div-text-conheca p {
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: 200;
+  padding: 10px 0px 0px;
+}
+
+.div-text-conheca {
+  width: 90%;
+}
+
+.div-text-conheca button {
+  padding: 3px 15px;
+  background: var(--color2);
+  border: none;
+  border-radius: 23px;
+  height: 37px;
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+.div-text-conheca button a {
+  color: var(--color3);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#text-crm {
+  font-size: 23px;
+}
+
+.negrito2 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+  .container-section-conheca {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0px 50px;
+  }
+
+  .div-text-conheca h2:last-child {
+    font-size: 32px;
+  }
+
+  .img-section-conheca {
+    border-radius: 8px;
+    width: 470px;
+  }
+
+  .div-text-conheca {
+    width: 622px;
+  }
+
+  .div-text-conheca h3 {
+    font-size: 17px;
+  }
+
+  .conheca-padding {
+    padding: 0px 0px 0px 0px;
+    background: #fff;
+  }
+
+  #text-crm {
+    padding: 10px 0;
+    font-size: 30px;
+  }
+
+  .div-text-conheca h2 {
+    font-size: 30px;
+    line-height: 42px;
+    color: #3d505f;
+  }
+
+  .div-text-conheca p {
+    max-width: 473px;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 0px;
+  }
+}
+
+.img-conheca-desktop {
+  background: #3d505f;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.img-side-conteudo-1 {
+  background: var(--color2);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}

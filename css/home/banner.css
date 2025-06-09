@@ -1,0 +1,268 @@
+.background-banner {
+  background-image: url(/img/banner/bannermobile2.png);
+  padding: 0px 0px 51px 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: flex-start;
+  display: flex;
+  height: 680px;
+}
+
+.container-text-banner img {
+  display: none;
+}
+
+#butto-header2 {
+  display: none;
+}
+
+.container-text-banner {
+  width: 90%;
+  margin: 80px auto 0px;
+  color: white;
+}
+
+/* Ocultar botão "Agendar consulta" no banner mobile */
+.background-banner .botao-pulse {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container-text-banner {
+    backdrop-filter: blur(1px);
+    font-weight: 400;
+  }
+}
+
+.container-text-banner h2 {
+  font-size: 30px;
+  font-style: italic;
+  color: #3d505f;
+  font-weight: 500;
+}
+
+.container-text-banner h1 {
+  font-size: 40px;
+  line-height: 39px;
+  max-width: 345px;
+  font-weight: 300;
+  padding: 4px 0px 0px 0px;
+  color: #fff;
+}
+
+.container-text-banner p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  padding: 0px 0px 0px;
+  max-width: 424px;
+  color: #fff;
+}
+
+#second-button {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+#second-button a {
+  color: #4f5d6a;
+  font-weight: 800;
+}
+
+.div-button-banner {
+  display: flex;
+}
+
+.div-button-banner button {
+  padding: 5px 13px;
+  height: 35px;
+  background: #3d505f;
+  border: none;
+  border-radius: 34px;
+  display: none;
+}
+
+.div-button-banner button a {
+  color: var(--color3);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.botao-pulse {
+  padding: 0px 17px;
+  cursor: pointer;
+  background: #4f5d6a;
+  height: 35px;
+  border: none;
+  border-radius: 35px;
+  margin-top: 15px;
+  display: inline-block;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.botao-pulse a {
+  color: white;
+  font-size: 15px;
+  line-height: 35px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  25% {
+    -moz-transform: scale(1.1);
+  }
+
+  50% {
+    -moz-transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-ms-keyframes pulse {
+  0% {
+    -ms-transform: scale(1);
+  }
+
+  25% {
+    -ms-transform: scale(1.1);
+  }
+
+  50% {
+    -ms-transform: scale(1);
+  }
+
+  100% {
+    -ms-transform: scale(1);
+  }
+}
+
+@-o-keyframes pulse {
+  0% {
+    -o-transform: scale(1);
+  }
+
+  25% {
+    -o-transform: scale(1.1);
+  }
+
+  50% {
+    -o-transform: scale(1);
+  }
+
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .div-button-banner button {
+    padding: 5px 20px;
+  }
+
+  .container-text-banner img {
+    display: block;
+    width: 360px;
+    margin-bottom: 19px;
+  }
+
+  .background-banner {
+    height: 745px;
+    width: auto;
+    align-items: center;
+    background-position: top;
+    background-image: url(/img/banner/bannerdesck2.png);
+    background-size: cover;
+  }
+
+  #butto-header2 {
+    display: block;
+  }
+
+  .container-text-banner {
+    max-width: 1210px;
+    margin: 125px auto 0px;
+  }
+
+  .background-banner .botao-pulse {
+    display: inline-block;
+  }
+
+  .container-text-banner h1 {
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 500;
+    padding: 0px 0px 5px 0px;
+  }
+
+  .background-banner h1 {
+    font-size: 62px;
+    max-width: 550px;
+    line-height: 62px;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: #fff;
+  }
+
+  .background-banner h1 span {
+    font-weight: 700;
+  }
+
+  .container-text-banner p {
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 18px;
+    padding: 0px 0px 0px;
+    max-width: 508px;
+    color: #fff;
+  }
+
+  .container-text-banner h2 {
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    color: #fff;
+  }
+}

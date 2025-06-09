@@ -1,0 +1,92 @@
+.container-section-sintomas {
+  background-color: rgb(217 217 217 / 58%);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 50px 0px 00px;
+}
+
+.div-text-sintomas h2 {
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 300;
+  color: #003a40;
+}
+
+.div-text-sintomas h2:last-child {
+  font-size: 25px;
+}
+
+.img-section-sintomas {
+  width: 90%;
+}
+
+.img-section-sintomas img {
+  height: 302px;
+}
+
+.div-text-sintomas p {
+  padding: 10px 0px 15px;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.div-text-sintomas {
+  width: 90%;
+}
+
+.div-text-sintomas button {
+  padding: 9px 15px;
+  background: var(--color5);
+  border: none;
+  border-radius: 8px;
+}
+
+.div-text-sintomas button a {
+  color: var(--color3);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+
+  .container-section-sintomas {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0px 0px;
+  }
+
+  .img-section-sintomas {
+    border-radius: 8px;
+    width: 440px;
+  }
+
+  #text-section-sintomas {
+    padding: 2px 0px 10px;
+  }
+
+  .div-text-sintomas {
+    width: 622px;
+  }
+
+  .div-text-sintomas h2 {
+    font-size: 43px;
+    line-height: 42px;
+  }
+
+  .div-text-sintomas p {
+    max-width: none;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 2px 0px 0px;
+  }
+
+}
+
+.container-sintomas h2 {
+  text-align: center;
+  padding: 20px 0px 0px;
+  color: #003a40;
+}

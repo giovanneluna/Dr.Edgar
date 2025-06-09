@@ -1,0 +1,192 @@
+header {
+  width: 100%;
+  background: rgb(241, 241, 241);
+}
+
+.container-header {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  /* box-shadow: 1px 1px 6px 1px #0000003d; */
+}
+
+.section-header {
+  width: 100%;
+  position: absolute;
+  z-index: 99999;
+}
+
+/* Estilo para ícones brancos no mobile por padrão */
+.icone-branco {
+  filter: brightness(0) invert(1);
+}
+
+/* Logo branca no mobile */
+.figure-logo img {
+  width: 200px;
+  padding: 0px;
+  margin-top: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.nav1 {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu a {
+  color: var(--color4);
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #32383b;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  background-color: #3d505f;
+}
+
+.nav-menu-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu-icons img {
+  width: 26px;
+}
+
+.div-style {
+  width: 343px;
+  height: 1px;
+  background: #fff;
+  margin: 10px 0px 9px;
+}
+
+.menu-button:hover {
+  background: #3d505f;
+  color: white;
+}
+
+.button-header {
+  padding: 0px 17px;
+  cursor: pointer;
+  background: #4f5d6a;
+  border: none;
+  border-radius: 35px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-header a {
+  color: white;
+  font-size: 15px;
+  line-height: 35px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav1 a {
+  font-size: 16px;
+  color: #32383b;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  /* No desktop, remove o filtro dos ícones */
+  .icone-branco {
+    filter: none;
+  }
+
+  /* No desktop, a logo volta à cor original */
+  .figure-logo img {
+    filter: none;
+    margin-top: 2px;
+    width: 250px;
+  }
+
+  .div-style {
+    margin: 10px 0px 20px;
+    width: 513px;
+  }
+
+  header {
+    z-index: 99999;
+    top: 0px;
+  }
+
+  .postion-header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .div-button-banner {
+    display: flex;
+    gap: 9px;
+  }
+
+  .nav1 {
+    display: block;
+  }
+
+  .container-header {
+    height: 75px;
+    position: fixed;
+    background-color: #fff;
+  }
+
+  .nav1 a {
+    font-size: 16px;
+    color: #32383b;
+    font-weight: 200;
+    cursor: pointer;
+  }
+
+  .button-header {
+    padding: 0px 17px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    height: 35px;
+    background: #3d505f;
+    border: none;
+    border-radius: 35px;
+  }
+
+  .button-header li a {
+    color: var(--color3);
+    font-size: 15px;
+  }
+
+  .nav-menu {
+    align-items: center;
+  }
+
+  .nav-menu-icons img {
+    width: 28px;
+  }
+}

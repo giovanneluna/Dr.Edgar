@@ -1,0 +1,23 @@
+.container-cirurgias {
+  width: 90%;
+  margin: 0 auto;
+  padding: 35px 0px;
+}
+
+.div-cirurgias {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.div-cirurgias img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 1px 3px 5px rgb(0 0 0 / 30%);
+}
+
+@media screen and (min-width: 600px) {
+  .div-cirurgias {
+    flex-direction: row;
+  }
+}

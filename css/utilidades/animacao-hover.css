@@ -1,0 +1,122 @@
+/* Animações de hover para cards */
+.card-especialidades {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-especialidades:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo específico para cards da seção de tratamentos */
+.cards-mod {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.cards-mod:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+}
+
+/* Animação de rotação dos ícones de verificação removida conforme solicitação */
+
+.card-especialidades button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-especialidades button:hover {
+  transform: scale(1.05);
+}
+
+/* Animações para botões */
+.botao-pulse:hover,
+.button-cards:hover,
+.button-header:hover,
+.formulario button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito nos ícones */
+.nav-menu-icons figure img {
+  transition: transform 0.3s ease;
+}
+
+.nav-menu-icons figure:hover img {
+  transform: scale(1.2);
+}
+
+/* Animação nos links do menu */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--cor-p1);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Animação nos itens do footer */
+.div-footer-text-2 ul a {
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.div-footer-text-2 ul a:hover {
+  transform: translateX(5px);
+}
+
+/* Animação no botão de WhatsApp flutuante */
+#robbu-whatsapp-button {
+  transition: transform 0.3s ease;
+}
+
+#robbu-whatsapp-button:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Animação de pulsação para botões "Saiba mais" */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 58, 64, 0.4);
+  }
+
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(0, 58, 64, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 58, 64, 0);
+  }
+}
+
+.button-cards:hover,
+.card-especialidades button:hover {
+  animation: pulse 1.5s infinite;
+  transform: scale(1);
+}
+
+/* Transição suave para o formulário */
+.formulario input,
+.formulario button {
+  transition: all 0.3s ease;
+}
+
+.formulario input:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}

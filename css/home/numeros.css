@@ -1,0 +1,413 @@
+.container-section-numeros {
+  background-color: rgb(217 217 217 / 58%);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 50px 0px 00px;
+}
+
+.container-cards-numbers {
+  width: 90%;
+  display: flex;
+  gap: 41.8px;
+  margin: 30px auto 20px;
+  flex-direction: column;
+}
+
+.div-text-numeros h2 {
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 300;
+  color: #003a40;
+}
+
+.div-text-numeros h2:last-child {
+  font-size: 25px;
+}
+
+.div-text-numeros p {
+  padding: 10px 0px 15px;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.div-text-numeros {
+  width: 90%;
+}
+
+.div-text-numeros button {
+  padding: 9px 15px;
+  background: var(--color5);
+  border: none;
+  border-radius: 8px;
+}
+
+.div-text-numeros button a {
+  color: var(--color3);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.cards-numbers h2 {
+  font-size: 80px;
+  font-weight: 400;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #59ada7, #003a40);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards-numbers {
+  /* width: 300px; */
+  margin: 0 auto;
+}
+
+.cards-numbers p {
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#numeros {
+  flex-direction: column;
+  background: white;
+}
+
+.meus-numeros-section {
+  background-color: #3d505f;
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padrão de fundo */
+.meus-numeros-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 25%,
+      transparent 25%
+    ),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%);
+  background-size: 30px 30px;
+  z-index: 0;
+}
+
+.meus-numeros-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.meus-numeros-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.meus-numeros-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.meus-numeros-header h2 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.meus-numeros-header h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.meus-numeros-header h3:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 15px;
+}
+
+.meus-numeros-header .destaque {
+  font-weight: 600;
+}
+
+.numeros-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.numero-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.numero-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.numero-valor {
+  font-size: 46px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.numero-label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.numero-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.meus-numeros-formacao {
+  margin-top: 10px;
+}
+
+.meus-numeros-formacao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meus-numeros-formacao li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.meus-numeros-formacao li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8ed1dc;
+  font-size: 16px;
+}
+
+.meus-numeros-foto {
+  display: none;
+}
+
+/* Melhorias específicas para mobile */
+@media screen and (max-width: 767px) {
+  .meus-numeros-section {
+    padding: 40px 0;
+  }
+
+  .meus-numeros-container {
+    width: 95%;
+  }
+
+  .meus-numeros-header {
+    text-align: center;
+  }
+
+  .meus-numeros-header h3:after {
+    margin: 15px auto 0;
+  }
+
+  .numeros-cards-container {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+  }
+
+  .numero-card {
+    width: 100%;
+    min-width: 100%;
+    padding: 16px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .numero-valor {
+    font-size: 56px;
+    margin-bottom: 2px;
+    background: linear-gradient(90deg, #fff, #8ed1dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .numero-label {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .numero-card p {
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  .meus-numeros-formacao {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+  }
+
+  .meus-numeros-formacao li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .meus-numeros-foto {
+    display: block;
+    margin: 30px auto 0;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .meus-numeros-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+/* Responsividade */
+@media screen and (min-width: 768px) {
+  .meus-numeros-section {
+    padding: 80px 0;
+  }
+
+  .meus-numeros-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .meus-numeros-content {
+    flex: 1;
+    max-width: 60%;
+  }
+
+  .meus-numeros-header {
+    text-align: left;
+  }
+
+  .meus-numeros-header h2 {
+    font-size: 20px;
+  }
+
+  .meus-numeros-header h3 {
+    font-size: 38px;
+  }
+
+  .numeros-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .numero-card {
+    flex: 1;
+    min-width: 160px;
+    margin: 0;
+  }
+
+  .meus-numeros-foto {
+    display: block;
+    flex: 1;
+    max-width: 40%;
+  }
+
+  .meus-numeros-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .meus-numeros-formacao li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container-section-numeros {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0px 0px;
+  }
+
+  .container-cards-numbers {
+    display: flex;
+    flex-direction: row;
+    max-width: 970px;
+  }
+
+  #div-text-number {
+    font-size: 43px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  #text-numeros {
+    padding: 10px 0px 10px;
+  }
+
+  #numeros {
+    flex-direction: column;
+    padding: 80px 0px;
+  }
+
+  .div-text-numeros {
+    width: 622px;
+  }
+
+  .div-text-numeros h2 {
+    font-size: 43px;
+    line-height: 42px;
+  }
+
+  .div-text-numeros p {
+    max-width: none;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 2px 0px 0px;
+  }
+}

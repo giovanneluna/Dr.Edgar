@@ -1,0 +1,32 @@
+/* Global */
+@import "./global/global.css";
+@import "./global/reset.css";
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* Home */
+@import "./home/banner.css";
+@import "./home/marquee.css";
+@import "./home/cirurgia.css";
+@import "./home/conheca.css";
+@import "./home/especialidade.css";
+@import "./home/exames.css";
+@import "./home/sintomas.css";
+@import "./home/especializacoes.css";
+@import "./home/idb.css";
+@import "./home/numeros.css";
+@import "./home/form.css";
+@import "./home/home.css";
+@import "./home/cards.css";
+@import "./home/maps.css";
+@import "./home/avaliacoes.css";
+
+/* Utilidades */
+@import "./utilidades/animacao.css";
+@import "./utilidades/cores.css";
+@import "./utilidades/animacao-hover.css";
+
+/* para usar o mincss
+cleancss -o ./css/style.min.css ./css/style.css
+quando o site estiver completo trocar o arquivo css padrão
+*/

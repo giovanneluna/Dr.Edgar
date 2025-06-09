@@ -1,0 +1,161 @@
+.cta-final-formulario img {
+  width: 80%;
+  margin: 50px 0px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container-formulario {
+  background: linear-gradient(250deg, #fff, #f4f4f4);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  background: #e3e3e391;
+  padding: 15px 10px;
+  border-radius: 15px;
+  margin: 0 auto 30px;
+}
+
+
+.formulario h2 {
+  font-size: 27px;
+  width: 90%;
+  padding: 5px 0px 14px;
+  color: #3d505f;
+  font-weight: 200;
+}
+
+.formulario p {
+  font-size: 14px;
+  line-height: 29px;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+.formulario input::placeholder {
+  color: #32383b;
+  font-weight: 300;
+}
+
+.formulario input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 9px 6px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  border: 1px solid #c8c8c8;
+}
+
+.formulario button {
+  padding: 5px 0px;
+  width: 155px;
+  font-size: 17px;
+  height: 39px;
+  background: #3d505f;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media(min-width:1440px) {
+  .cta-final-formulário {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .container-formulario {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-final-formulario img {
+    width: 417px;
+    border-radius: 18px;
+  }
+
+  #id-div-formulario {
+    display: flex;
+    align-items: center;
+  }
+
+  .formulario {
+    width: 410px;
+    margin: 25px 45px;
+    padding: 65px 40px;
+  }
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #3d505f;
+}
+
+#form-consulta button {
+  width: 100%;
+  height: 50px;
+  background: #3d505f;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.formulario input[name="Telefone"],
+.formulario .phone-mask {
+  letter-spacing: 1px;
+  font-family: monospace;
+  font-size: 1rem;
+  background-image: url('../../img/icones/telefone.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px center;
+  padding-left: 40px;
+  transition: all 0.3s ease;
+}
+
+.formulario input[name="Telefone"]:focus,
+.formulario .phone-mask:focus {
+  border-color: var(--color2);
+  box-shadow: 0 0 0 2px rgba(61, 80, 95, 0.2);
+}
+
+/* Estilizando o placeholder do telefone */
+.formulario input[name="Telefone"]::placeholder {
+  opacity: 0.7;
+  letter-spacing: normal;
+}
+
+.formulario input[name="Nome"] {
+  background-image: url('../../img/icones/usuario.png');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 10px center;
+  padding-left: 40px;
+  transition: all 0.3s ease;
+}
+
+.formulario input[name="Nome"]:focus {
+  border-color: var(--color2);
+  box-shadow: 0 0 0 2px rgba(61, 80, 95, 0.2);
+}
+
+/* Estilizando o placeholder do nome */
+.formulario input[name="Nome"]::placeholder {
+  opacity: 0.7;
+  letter-spacing: normal;
+}

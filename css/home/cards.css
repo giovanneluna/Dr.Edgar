@@ -1,0 +1,298 @@
+#card-image {
+  width: 33px;
+  border-radius: 8px;
+}
+
+.section-cards {
+  width: 90%;
+  margin: 0px auto 35px;
+  background: var(--color3);
+  padding: 25px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 3px 9px #0000004a;
+}
+
+.container-cards-cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container-section-especialidade {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0px 0px;
+  }
+
+  .container-cards-cards {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .card-cards {
+    width: 356px;
+    box-shadow: 0px 3px 9px #0000004a;
+  }
+}
+
+/* Estilo específico para a seção "Condições tratadas" */
+#card-color .container-cards-especialidades {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+#card-color .card-especialidades {
+  width: 280px;
+  margin: 0;
+}
+
+#card-color .card-especialidades h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+#card-color .card-especialidades p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+#card-color .card-especialidades button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
+
+#card-color .card-especialidades img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+  #card-color .container-cards-especialidades {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  #card-color .container-cards-especialidades {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #card-color .container-cards-especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #card-color .container-cards-especialidades {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos para o container principal e as fileiras de cards */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Estilos específicos para as fileiras de 5 e 4 cards */
+.cards-row-five {
+  justify-content: space-between;
+}
+
+.cards-row-four {
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+/* Ajustes para os cards individuais - otimizado para 1280x800 */
+.cards-mod {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: calc(20% - 16px);
+  margin: 0;
+  padding: 15px 10px 25px;
+  transition: transform 0.3s ease;
+}
+
+.cards-mod:hover {
+  transform: translateY(-5px);
+}
+
+/* Segunda fileira (4 cards) - ajustando o tamanho para distribuição uniforme */
+.cards-row:nth-child(2) .cards-mod {
+  width: calc(25% - 15px);
+}
+
+/* Media query específica para 1280x800 e similares */
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .cards-container {
+    max-width: 1180px;
+  }
+
+  .cards-row {
+    gap: 16px;
+  }
+
+  .cards-mod {
+    width: calc(20% - 13px);
+  }
+
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(25% - 12px);
+  }
+
+  .cards-row-four {
+    padding: 0 6.5%;
+  }
+}
+
+/* Estilo específico para resolução exata 1280x800 */
+@media (width: 1280px) {
+  .cards-container {
+    max-width: 1160px;
+  }
+
+  .cards-row-five {
+    gap: 14px;
+  }
+
+  .cards-row-four {
+    gap: 18px;
+    padding: 0 5.5%;
+  }
+
+  .cards-mod {
+    width: calc(20% - 11.2px);
+  }
+
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(25% - 13.5px);
+  }
+}
+
+/* Media queries para outras resoluções */
+@media (max-width: 1200px) {
+  .cards-container {
+    max-width: 960px;
+  }
+
+  .cards-mod {
+    width: calc(20% - 16px);
+  }
+
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(25% - 16px);
+  }
+
+  .cards-row-four {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .cards-row {
+    flex-wrap: wrap;
+  }
+
+  .cards-row-five,
+  .cards-row-four {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .cards-mod {
+    width: calc(33.33% - 16px);
+    margin-bottom: 16px;
+  }
+
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(33.33% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cards-row-five,
+  .cards-row-four {
+    padding: 0;
+  }
+
+  .cards-mod,
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-mod,
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(100% - 20px);
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .cards-row {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .cards-row-five,
+  .cards-row-four {
+    padding: 0;
+  }
+}
+
+/* Ajuste específico para dispositivos com largura entre 1280 e 1366 (comuns em laptops) */
+@media (min-width: 1280px) and (max-width: 1366px) {
+  .cards-container {
+    max-width: 1269px;
+  }
+
+  .cards-mod {
+    width: calc(20% - 15px);
+  }
+
+  .cards-row:nth-child(2) .cards-mod {
+    width: calc(25% - 18px);
+  }
+
+  .cards-row-four {
+    padding: 0 4%;
+  }
+}

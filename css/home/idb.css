@@ -1,0 +1,105 @@
+.container-section-idb {
+  background-color: rgb(217 217 217 / 58%);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 50px 0px 00px;
+}
+
+
+.div-text-idb h2 {
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 300;
+  color: #003a40;
+}
+
+.div-text-idb h2:last-child {
+  font-size: 25px;
+}
+
+#ul-IBDclub li p {
+  padding: 4px 0px 5px;
+
+}
+
+#ul-IBDclub {
+  padding: 10px 0px;
+}
+
+.div-text-idb p {
+  padding: 10px 0px 15px;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.div-text-idb {
+  width: 90%;
+}
+
+.div-text-idb button {
+  padding: 9px 15px;
+  background: var(--color5);
+  border: none;
+  border-radius: 8px;
+}
+
+.div-text-idb button a {
+  color: var(--color3);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+#section-IBDclub {
+  padding: 50px 0px 50px;
+}
+
+#button-idb-club button {
+  background: var(--color3);
+}
+
+#button-idb-club button a {
+  color: var(--color1);
+}
+
+#section-IBDclub button {
+  background: var(--color2);
+}
+
+
+@media screen and (min-width: 600px) {
+
+  .container-section-idb {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0px 0px;
+  }
+
+  .div-text-idb {
+    width: 622px;
+  }
+
+  .div-text-idb h2 {
+    font-size: 43px;
+    line-height: 42px;
+  }
+
+  .div-text-idb p {
+    max-width: none;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 2px 0px 0px;
+  }
+
+
+
+  #section-IBDclub {
+    padding: 100px 0px;
+  }
+
+  #button-idb {
+    background-color: var(--color2);
+  }
+}
