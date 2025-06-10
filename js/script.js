@@ -116,6 +116,61 @@ function checkAvifSupport() {
   })
 }
 
+// === FONT LOADING CHECK FOR IPHONE/SAFARI ===
+function checkFontLoading() {
+  // Verificar se é iPhone/iPad/Safari
+  const isAppleDevice = /iPhone|iPad|iPod|Safari/i.test(navigator.userAgent)
+  const isChrome = /Chrome/i.test(navigator.userAgent)
+
+  if (isAppleDevice && !isChrome) {
+    console.log(
+      "Dispositivo Apple detectado - verificando carregamento de fontes..."
+    )
+
+    // Garantir que Poppins seja aplicada corretamente
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready
+        .then(function () {
+          const fontLoaded = document.fonts.check("16px Poppins")
+
+          if (fontLoaded) {
+            console.log("✅ Fonte Poppins carregada com sucesso!")
+            document.body.classList.add("font-loaded")
+          } else {
+            console.log(
+              "⚠️ Fonte Poppins não detectada - aplicando fallback..."
+            )
+            // Forçar aplicação da fonte
+            const style = document.createElement("style")
+            style.innerHTML = `
+            *, *::before, *::after {
+              font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+            }
+          `
+            document.head.appendChild(style)
+          }
+        })
+        .catch(function () {
+          console.log(
+            "⚠️ Erro no carregamento de fontes - aplicando fallback..."
+          )
+          // Aplicar fallback em caso de erro
+          document.body.style.fontFamily =
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        })
+    } else {
+      // Fallback para navegadores que não suportam document.fonts
+      setTimeout(function () {
+        console.log(
+          "📱 Aplicando fonte diretamente para dispositivos mais antigos..."
+        )
+        document.body.style.fontFamily =
+          '"Poppins", -apple-system, BlinkMacSystemFont, sans-serif'
+      }, 100)
+    }
+  }
+}
+
 // === MOBILE LAYOUT FIXES ===
 function initMobileFixes() {
   // Detectar se é dispositivo móvel
@@ -197,4 +252,5 @@ window.addEventListener("load", () => {
   initAnimaScroll()
   initInfographics()
   initMobileFixes() // Adicionar correções mobile
+  checkFontLoading() // Verificar carregamento de fontes
 })

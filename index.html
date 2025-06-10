@@ -8,6 +8,16 @@
   <meta name="description"
     content="Dr. Edgar Oliveira Sarmento - Urologista e Andrologista especializado em saúde masculina em Brasília." />
   <meta name="theme-color" content="#c96332">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  </noscript>
+
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="stylesheet" href="/css/style.css">
 
@@ -15,6 +25,12 @@
 
   <script>
     document.documentElement.classList.add("js");
+
+    if (/iPhone|iPad|iPod|Safari/i.test(navigator.userAgent)) {
+      document.fonts.ready.then(function () {
+        document.body.style.fontFamily = '"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      });
+    }
   </script>
 </head>
 
@@ -39,7 +55,7 @@
                 <a class="nav-link" href="#card-color">Tratamentos</a>
               </li>
               <li>
-                <a class="nav-link" href="#infographics">Pilares da autoestima masculina</a>
+                <a class="nav-link" href="#infographics">Pilares</a>
               </li>
             </ul>
           </nav>
@@ -172,7 +188,7 @@
         <div class="infographics-header">
           <div class="infographics-badge">SAÚDE MASCULINA</div>
           <h2 class="infographics-title">
-          <span class="infographics-highlight">Pilares</span> da autoestima masculina
+            <span class="infographics-highlight">Pilares</span> da autoestima masculina
           </h2>
           <p class="infographics-subtitle">
             Conheça os elementos fundamentais para conquistar confiança, vigor e bem-estar
@@ -182,12 +198,14 @@
         <div class="infographics-grid">
           <div class="infographic-card">
             <div class="infographic-icon">
-              <img src="img/infograficos/pilar-icon.svg" alt="Ícone de pilar - Confiança e Desempenho" class="pilar-icon">
+              <img src="img/infograficos/pilar-icon.svg" alt="Ícone de pilar - Confiança e Desempenho"
+                class="pilar-icon">
             </div>
             <div class="infographic-content">
               <h3 class="infographic-title">Confiança e Desempenho</h3>
               <p class="infographic-description">
-                Tratamentos individualizados para <strong>disfunção erétil</strong> e melhora da resposta sexual, com resultados rápidos e efetivos.
+                Tratamentos individualizados para <strong>disfunção erétil</strong> e melhora da resposta sexual, com
+                resultados rápidos e efetivos.
               </p>
               <!-- <button class="infographic-button"
                 onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para confiança e desempenho com o Dr. Edgar Oliveira Sarmento.', '_blank')">
@@ -207,7 +225,8 @@
             <div class="infographic-content">
               <h3 class="infographic-title">Vigor e Energia</h3>
               <p class="infographic-description">
-                Estratégias personalizadas de <strong>reposição hormonal</strong>, otimizando os níveis de testosterona para mais disposição, força e vitalidade.
+                Estratégias personalizadas de <strong>reposição hormonal</strong>, otimizando os níveis de testosterona
+                para mais disposição, força e vitalidade.
               </p>
               <!-- <button class="infographic-button"
                 onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para vigor e energia com o Dr. Edgar Oliveira Sarmento.', '_blank')">
@@ -227,7 +246,8 @@
             <div class="infographic-content">
               <h3 class="infographic-title">Força e Presença</h3>
               <p class="infographic-description">
-                Especialista em <strong>preenchimento peniano com ácido hialurônico</strong>, um procedimento seguro e eficaz para homens que desejam melhorar sua confiança.
+                Especialista em <strong>preenchimento peniano com ácido hialurônico</strong>, um procedimento seguro e
+                eficaz para homens que desejam melhorar sua confiança.
               </p>
               <!-- <button class="infographic-button"
                 onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para força e presença com o Dr. Edgar Oliveira Sarmento.', '_blank')">
@@ -245,7 +265,7 @@
 
 
 
-    
+
     <div class="container-section-especialidade-premium" id="especialidade">
       <div class="especialidade-premium-header">
         <div class="especialidade-badge">PRINCIPAIS SOLUÇÕES</div>
