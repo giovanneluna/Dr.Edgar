@@ -1,26 +1,40 @@
+/* Variáveis CSS para melhor manutenibilidade */
+:root {
+  --primary-color: #c96332;
+  --primary-light: #d9916f;
+  --primary-dark: #784026;
+  --card-radius: 20px;
+  --transition-smooth: all 0.3s ease;
+  --transition-smooth-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-light: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.2);
+  --shadow-heavy: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção principal de especialidades (legado) */
 .container-section-especialidade {
-  background: linear-gradient(0deg, #f8fafc, #c96332);
+  background: linear-gradient(0deg, #f8fafc, var(--primary-color));
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  padding: 50px 0px 00px;
+  padding: 50px 0;
 }
 
 .titulo-sintomas {
-  color: #c96332;
-  font-weight: 300;
-  line-height: 32px;
-  margin-top: 20px;
+  color: var(--primary-color);
+  font: 300 27px/32px inherit;
+  margin: 20px auto 0;
   width: 90%;
-  font-size: 27px;
   text-align: center;
 }
 
+.div-text-especialidade {
+  width: 90%;
+}
+
 .div-text-especialidade h2 {
-  font-size: 35px;
-  line-height: 37px;
-  font-weight: 300;
-  color: #c96332;
+  font: 300 35px/37px inherit;
+  color: var(--primary-color);
 }
 
 .div-text-especialidade h2:last-child {
@@ -28,42 +42,104 @@
 }
 
 .div-text-especialidade p {
-  padding: 10px 0px 15px;
-  font-size: 17px;
-  line-height: 26px;
+  padding: 10px 0 15px;
+  font: 17px/26px inherit;
 }
 
-.div-text-especialidade {
-  width: 90%;
+.div-text-especialidade button {
+  padding: 9px 15px;
+  background: var(--color5);
+  border: none;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
 }
 
+.div-text-especialidade button a {
+  color: #fff;
+  font: 500 19px inherit;
+}
+
+/* Cards de especialidades (legado) */
 #especialidade {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
 }
 
 #card-color {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   background: linear-gradient(45deg, #f8fafc, rgba(217, 145, 111, 0.2));
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 #card-color-1 {
   background: #ffffff;
-  box-shadow: 3px 5px 7px 2px #0000000f;
+  box-shadow: var(--shadow-light);
 }
 
-#div-text-especialidades {
-  padding: 15px 0px;
+.container-cards-especialidades {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 15px;
 }
 
-#div-text-especialidades h2 {
-  color: #ffffff;
-  max-width: 350px;
+.card-especialidades {
+  width: 84%;
+  margin: 0 auto 35px;
+  background: #f4f6f8;
+  padding: 0 0 25px;
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-weight: 300;
+  overflow: hidden;
+}
+
+.card-especialidades img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-especialidades h2 {
+  font: 400 25px/30px inherit;
+  color: #32383b;
+  max-width: 270px;
+  margin-top: 20px;
+}
+
+.card-especialidades p {
+  font: 300 14px/29px inherit;
+  padding: 8px 16px 10px;
+}
+
+.card-especialidades button,
+.button-cards-doencas {
+  height: 33px;
+  border-radius: 31px;
+  border: 1px solid rgba(159, 159, 159, 0.4);
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 20px;
+  transition: var(--transition-smooth);
+}
+
+.button-cards-doencas {
+  height: 39px;
+  font-size: 17px;
+  border-color: rgba(0, 0, 0, 0.22);
+}
+
+/* IDs específicos consolidados */
+#div-text-especialidades {
+  padding: 15px 0;
 }
 
 #div-text-especialidades h2 {
@@ -78,135 +154,33 @@
   max-width: 321px;
 }
 
-.card-especialidades h2 {
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 30px;
-  color: #32383b;
-  max-width: 270px;
-  margin-top: 20px;
-}
-
-.container-cards-especialidades {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: center;
-  gap: 15px;
-}
-
 #primeiro-cards {
   background: white;
-}
-
-.card-especialidades {
-  width: 84%;
-  margin: 0px auto 35px;
-  background: #f4f6f8;
-  padding: 0px 0px 25px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.cards-mod {
-  width: 250px;
-  margin: 10px;
-}
-
-.card-especialidades img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 0;
-  transition: transform 0.3s ease;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.card-especialidades span {
-  font-weight: 500;
-  font-size: 18px;
 }
 
 #card-image {
   width: 33px;
   border-radius: 8px;
-  border: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
   background: transparent;
-}
-
-.card-especialidades p {
-  font-size: 14px;
-  line-height: 29px;
-  font-weight: 300;
-  padding: 8px 16px 10px;
-}
-
-.card-especialidades button {
-  height: 33px;
-  border-radius: 31px;
-  border: 1px solid rgb(159 159 159 / 40%);
-  background: transparent;
-  color: #c96332;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 0px 20px;
-}
-
-.button-cards-doencas {
-  height: 39px;
-  border-radius: 31px;
-  border: none;
-  background: #3a485900;
-  color: #c96332;
-  border: 1px solid #00000038;
-  font-size: 17px;
-  cursor: pointer;
-  padding: 0px 20px;
-}
-
-.div-text-especialidade button {
-  padding: 9px 15px;
-  background: var(--color5);
-  border: none;
-  border-radius: 8px;
-}
-
-.div-text-especialidade button a {
-  color: #fff;
-  font-size: 19px;
-  font-weight: 500;
 }
 
 #outras-patologias {
   background: #e5e5e5;
 }
 
+/* Seção de imagens gerais */
 .containter-img-geral {
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .containter-img-geral h1 {
-  color: #c96332;
-  font-size: 28px;
-  font-weight: 300;
-  margin-top: 40px;
+  color: var(--primary-color);
+  font: 300 28px/42px inherit;
   margin: 30px 20px 20px;
   text-align: center;
-  line-height: 42px;
 }
 
 .servicosgerais {
@@ -219,168 +193,23 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1100px) {
-  .cards-mod {
-    width: 220px;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .cards-mod {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .container-cards-especialidades {
-    justify-content: center;
-  }
-
-  .cards-mod {
-    width: 45%;
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .cards-mod {
-    width: 84%;
-    margin: 0px auto 35px;
-  }
-
-  .container-cards-especialidades {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .servicosgerais {
-    display: block;
-    width: 65%;
-    margin: 0 auto;
-  }
-
-  .servicosgerais2 {
-    display: none;
-  }
-
-  .container-section-especialidade {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 30px 0px 30px 0px;
-  }
-
-  .card-especialidades h2 {
-    font-size: 21px;
-    margin-top: 12px;
-    line-height: 26px;
-    padding: 0px 16px;
-  }
-
-  .card-especialidades p {
-    line-height: 23px;
-    font-size: 12px;
-    padding: 8px 16px 10px;
-  }
-
-  .div-text-especialidade {
-    width: 622px;
-  }
-
-  .div-text-especialidade h2 {
-    font-size: 43px;
-    line-height: 42px;
-  }
-
-  .div-text-especialidade p {
-    max-width: none;
-    font-size: 17px;
-    line-height: 30px;
-    padding: 2px 0px 0px;
-  }
-
-  #especialidade {
-    /* padding: 70px 0px 70px; */
-    gap: 20px;
-  }
-
-  #div-text-especialidades {
-    width: auto;
-  }
-
-  #div-text-especialidades h2 {
-    max-width: 827px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 35px;
-    line-height: 53px;
-  }
-
-  #div-text-especialidades p {
-    max-width: 517px;
-    margin: 0px auto;
-    padding: 5px 0px 0px;
-    color: #1a53ad;
-    text-align: center;
-  }
-
-  .card-especialidades {
-    width: 280px;
-    justify-content: space-between;
-    padding: 0px 0px 25px;
-    overflow: hidden;
-  }
-
-  .container-cards-especialidades {
-    display: flex;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .titulo-sintomas {
-    margin-top: 20px;
-    width: 90%;
-  }
-}
-
-.especialidade2-btn a button {
-  background: var(--color5);
-  padding: 5px 10px;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-size: 15px;
-  font-weight: 200;
-}
-
-/* Seção Premium de Especialidades */
+/* Seção premium - Problemas que resolvo */
 .container-section-especialidade-premium {
-  background: linear-gradient(135deg, #784026 0%, #c96332 50%, #7d4125 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-dark) 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
 }
 
 .container-section-especialidade-premium::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-      circle at 20% 80%,
-      rgba(120, 119, 198, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255, 183, 77, 0.1) 0%,
-      transparent 50%
-    );
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -397,39 +226,34 @@
 
 .especialidade-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   color: white;
   padding: 12px 32px;
   border-radius: 50px;
-  font-size: 14px;
-  font-weight: 700;
+  font: 700 14px inherit;
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-transform: uppercase;
-  box-shadow: 0 8px 25px rgb(11 11 13 / 40%);
+  box-shadow: 0 8px 25px rgba(11, 11, 13, 0.4);
   animation: pulse-badge 2s infinite;
 }
 
 @keyframes pulse-badge {
-  0% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
 
   50% {
     transform: scale(1.05);
   }
-
-  100% {
-    transform: scale(1);
-  }
 }
 
 .especialidade-premium-title {
-  font-size: clamp(32px, 6vw, 56px);
-  font-weight: 400;
+  font: 400 clamp(32px, 6vw, 56px)/1.1 inherit;
   color: white;
   margin-bottom: 24px;
-  line-height: 1.1;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -442,12 +266,10 @@
 }
 
 .especialidade-premium-subtitle {
-  font-size: 20px;
+  font: 300 20px/1.7 inherit;
   color: rgba(255, 255, 255, 0.9);
   max-width: 650px;
   margin: 0 auto;
-  line-height: 1.7;
-  font-weight: 300;
 }
 
 .especialidade-premium-grid {
@@ -459,24 +281,27 @@
   padding: 0 20px;
   position: relative;
   z-index: 2;
+  contain: layout;
 }
 
 .especialidade-premium-card {
-  background: rgb(255 255 255 / 11%);
+  background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(20px);
-  border: 1px solid rgb(255 255 255 / 29%);
+  border: 1px solid rgba(255, 255, 255, 0.29);
   border-radius: 24px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-smooth-slow);
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .especialidade-premium-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-heavy);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -491,6 +316,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  background-color: #f0f0f0;
 }
 
 .especialidade-premium-card:hover .card-premium-image-container img {
@@ -499,15 +325,8 @@
 
 .card-premium-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgb(255 255 255 / 0%) 0%,
-    rgb(255 255 255 / 30%) 100%
-  );
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -533,34 +352,30 @@
 .icon-circle {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  box-shadow: 0 8px 25px rgb(0 0 0 / 34%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.34);
 }
 
 .card-premium-title {
-  font-size: 22px;
-  font-weight: 600;
+  font: 600 22px/1.3 inherit;
   color: white;
   margin: 25px 0 8px 0;
-  line-height: 1.3;
 }
 
 .card-premium-subtitle {
-  font-size: 14px;
+  font: italic 14px inherit;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 16px;
-  font-style: italic;
 }
 
 .card-premium-description {
-  font-size: 15px;
+  font: 15px/1.6 inherit;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
   margin-bottom: 25px;
   flex: 1;
 }
@@ -571,17 +386,15 @@
   gap: 8px;
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
+  font: 500 15px inherit;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   border: none;
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: var(--transition-smooth);
   align-self: flex-start;
   margin-top: auto;
   cursor: pointer;
-  font-family: inherit;
 }
 
 .card-premium-button:hover {
@@ -604,39 +417,36 @@
   transform: translateX(3px);
 }
 
+/* CTA Section */
 .especialidade-premium-cta {
-  margin-top: 100px;
+  margin: 100px auto 0;
   text-align: center;
   position: relative;
   z-index: 2;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 20px;
 }
 
 .cta-content h3 {
-  font-size: clamp(24px, 4vw, 32px);
+  font: 500 clamp(24px, 4vw, 32px) inherit;
   color: white;
   margin-bottom: 12px;
-  font-weight: 500;
 }
 
 .cta-content p {
-  font-size: 18px;
+  font: 18px inherit;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 30px;
 }
 
 .cta-button-premium {
-  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   border: none;
   border-radius: 50px;
   padding: 16px 40px;
-  font-size: 18px;
-  font-weight: 600;
+  font: 600 18px inherit;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-smooth);
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
@@ -650,12 +460,7 @@
   text-decoration: none;
 }
 
-.cta-button-premium:hover a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Responsividade */
+/* Responsividade otimizada */
 @media screen and (max-width: 1200px) {
   .especialidade-premium-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -663,9 +468,33 @@
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .cards-mod {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .cards-mod {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container-cards-especialidades {
+    justify-content: center;
+  }
+
+  .cards-mod {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container-section-especialidade-premium {
     padding: 60px 0;
+    overflow-x: hidden;
   }
 
   .especialidade-premium-grid {
@@ -674,11 +503,18 @@
     padding: 0 15px;
     align-items: center;
     justify-items: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .especialidade-premium-card {
     max-width: 400px;
     width: 100%;
+    min-height: auto;
+  }
+
+  .card-premium-image-container {
+    height: 180px;
   }
 
   .card-premium-content {
@@ -700,14 +536,12 @@
   .card-premium-button {
     align-self: center;
     margin: 20px auto 0 auto;
+    width: fit-content;
+    font-size: 14px;
+    padding: 10px 18px;
   }
 
-  .especialidade-premium-cta {
-    margin-top: 60px;
-    padding: 0 15px;
-    text-align: center;
-  }
-
+  .especialidade-premium-cta,
   .especialidade-premium-header {
     margin-bottom: 60px;
     padding: 0 15px;
@@ -719,9 +553,123 @@
     padding: 10px 28px;
     margin-bottom: 24px;
   }
+
+  .especialidade-premium-title {
+    font-size: clamp(24px, 8vw, 32px);
+    line-height: 1.2;
+  }
+
+  .especialidade-premium-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .cards-mod {
+    width: 84%;
+    margin: 0 auto 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .servicosgerais {
+    display: block;
+  }
+
+  .servicosgerais2 {
+    display: none;
+  }
+
+  .container-section-especialidade {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0 0;
+  }
+
+  .div-text-especialidade {
+    width: 622px;
+  }
+
+  .div-text-especialidade h2 {
+    font-size: 43px;
+    line-height: 42px;
+  }
+
+  .div-text-especialidade p {
+    font-size: 17px;
+    line-height: 30px;
+    padding: 2px 0 0;
+  }
+
+  .card-especialidades {
+    width: 440px;
+    border-radius: 8px;
+  }
+
+  .card-especialidades h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .card-especialidades p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .container-cards-especialidades {
+    width: 1200px;
+    gap: 40px;
+  }
+
+  .titulo-sintomas {
+    font-size: 35px;
+    line-height: 40px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .container-section-especialidade-premium {
+    padding: 40px 0;
+  }
+
+  .especialidade-premium-grid {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .especialidade-premium-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-premium-image-container {
+    height: 160px;
+  }
+
+  .card-premium-content {
+    padding: 20px 15px;
+  }
+
+  .card-premium-title {
+    font-size: 20px;
+    margin: 20px 0 8px 0;
+  }
+
+  .card-premium-subtitle {
+    font-size: 13px;
+  }
+
+  .card-premium-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card-premium-button {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
   .especialidade-premium-title {
     font-size: 24px;
   }
@@ -730,12 +678,61 @@
     font-size: 16px;
   }
 
-  .card-premium-title {
-    font-size: 20px;
-  }
-
   .cta-button-premium {
     padding: 14px 30px;
     font-size: 16px;
+  }
+
+  .especialidade-premium-header {
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .especialidade-badge {
+    font-size: 11px;
+    padding: 8px 24px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .especialidade-premium-grid {
+    padding: 0 5px;
+  }
+
+  .card-premium-content {
+    padding: 15px 12px;
+  }
+
+  .card-premium-title {
+    font-size: 18px;
+  }
+
+  .card-premium-description {
+    font-size: 13px;
+  }
+
+  .especialidade-premium-title {
+    font-size: 22px;
+  }
+
+  .especialidade-premium-subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Touch devices optimization */
+@media (hover: none) and (pointer: coarse) {
+  .especialidade-premium-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .especialidade-premium-card:hover .card-premium-image-container img {
+    transform: none;
+  }
+
+  .especialidade-premium-card:hover .card-premium-overlay {
+    opacity: 0.3;
   }
 }
