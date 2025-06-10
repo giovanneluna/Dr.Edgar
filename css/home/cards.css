@@ -260,7 +260,6 @@
 }
 
 @media (max-width: 576px) {
-
   .cards-mod,
   .cards-row:nth-child(2) .cards-mod {
     width: calc(100% - 20px);
@@ -313,12 +312,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at top left,
+  background: radial-gradient(
+      ellipse at top left,
       rgba(201, 99, 50, 0.03) 0%,
-      transparent 50%),
-    radial-gradient(ellipse at bottom right,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
       rgba(217, 145, 111, 0.03) 0%,
-      transparent 50%);
+      transparent 50%
+    );
   z-index: 1;
 }
 
@@ -338,7 +341,7 @@
 .tratamentos-title {
   font-size: clamp(29px, 6vw, 48px);
   font-weight: 300;
-  color: #c96332;
+  color: #2d3748;
   margin: 0 0 20px 0;
   line-height: 1.2;
 }
@@ -534,12 +537,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at top left,
+  background: radial-gradient(
+      ellipse at top left,
       rgba(255, 255, 255, 0.1) 0%,
-      transparent 50%),
-    radial-gradient(ellipse at bottom right,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
       rgba(255, 255, 255, 0.05) 0%,
-      transparent 50%);
+      transparent 50%
+    );
   z-index: 1;
 }
 

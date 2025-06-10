@@ -45,3 +45,69 @@ function toggleFaq(element) {
     faqItem.classList.add("active")
   }
 }
+
+// Função para adicionar efeito de smooth scroll aos links
+function initSmoothScroll() {
+  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href');
+    const section = document.querySelector(href);
+    
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
+  
+  linksInternos.forEach(link => {
+    link.addEventListener('click', scrollToSection);
+  });
+}
+
+// Função para animar os elementos quando entrarem na viewport
+function initAnimaScroll() {
+  const sections = document.querySelectorAll('[data-anime]');
+  
+  function animaScroll() {
+    const windowTop = window.pageYOffset + (window.innerHeight * 0.75);
+    
+    sections.forEach(section => {
+      if ((windowTop) > section.offsetTop) {
+        section.classList.add('anime');
+      }
+    });
+  }
+  
+  if(sections.length) {
+    animaScroll();
+    window.addEventListener('scroll', animaScroll);
+  }
+}
+
+// Função para inicializar os infográficos
+function initInfographics() {
+  const infographicCards = document.querySelectorAll('.infographic-card');
+  
+  if (infographicCards.length) {
+    infographicCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('active');
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('active');
+      });
+    });
+  }
+}
+
+// Funções que serão executadas quando o DOM for carregado
+window.addEventListener("load", () => {
+  initSmoothScroll();
+  initAnimaScroll();
+  initInfographics();
+});

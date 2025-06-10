@@ -1,0 +1,221 @@
+/* Estilos para a seção de infográficos */
+
+.infographics-section {
+  background-color: #f9f5f2;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.infographics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.infographics-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.infographics-badge {
+  display: inline-block;
+  background-color: rgba(201, 99, 50, 0.1);
+  color: var(--color2);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.infographics-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-text-2);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.infographics-highlight {
+  color: var(--color2);
+}
+
+.infographics-subtitle {
+  font-size: 18px;
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.infographics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.infographic-card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(201, 99, 50, 0.1);
+}
+
+.infographic-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(201, 99, 50, 0.15);
+  border-color: rgba(201, 99, 50, 0.3);
+}
+
+.infographic-icon {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.pilar-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0px 5px 10px rgba(201, 99, 50, 0.15));
+  transition: all 0.4s ease;
+}
+
+.infographic-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.infographic-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-2);
+  margin-bottom: 20px;
+}
+
+.infographic-description {
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.infographic-description strong {
+  color: var(--color2);
+  font-weight: 700;
+}
+
+.infographic-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color2);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: center;
+}
+
+.infographic-button:hover {
+  background-color: #b85527;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(201, 99, 50, 0.2);
+}
+
+.infographic-button svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.infographic-button:hover svg {
+  transform: translateX(3px);
+}
+
+/* Animação para os pilares */
+@keyframes pillarPulse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.infographic-card:hover .pilar-icon {
+  filter: drop-shadow(0px 8px 15px rgba(201, 99, 50, 0.25));
+  transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .infographics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .infographics-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .infographics-section {
+    padding: 60px 0;
+  }
+
+  .infographics-title {
+    font-size: 32px;
+  }
+
+  .infographic-card {
+    padding: 30px 20px;
+  }
+
+  .infographic-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .infographics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .infographics-header {
+    margin-bottom: 40px;
+  }
+
+  .infographics-title {
+    font-size: 28px;
+  }
+
+  .infographic-icon {
+    margin-bottom: 20px;
+  }
+
+  .pilar-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
