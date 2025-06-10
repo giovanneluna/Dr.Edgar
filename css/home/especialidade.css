@@ -358,22 +358,29 @@
 
 /* Seção Premium de Especialidades */
 .container-section-especialidade-premium {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #c96332 100%);
+  background: linear-gradient(135deg, #784026 0%, #c96332 50%, #7d4125 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
 
 .container-section-especialidade-premium::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.1) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 183, 77, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -399,7 +406,7 @@
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-transform: uppercase;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 25px rgb(11 11 13 / 40%);
   animation: pulse-badge 2s infinite;
 }
 
@@ -427,7 +434,7 @@
 }
 
 .highlight-especialidade {
-  background: linear-gradient(135deg, #c96332 0%, #d9916f 100%);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -455,9 +462,9 @@
 }
 
 .especialidade-premium-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(255 255 255 / 11%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(255 255 255 / 29%);
   border-radius: 24px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -496,7 +503,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(255 255 255 / 30%) 100%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -528,7 +539,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 25px rgb(0 0 0 / 34%);
 }
 
 .card-premium-title {

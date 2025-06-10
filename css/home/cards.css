@@ -260,7 +260,6 @@
 }
 
 @media (max-width: 576px) {
-
   .cards-mod,
   .cards-row:nth-child(2) .cards-mod {
     width: calc(100% - 20px);
@@ -313,9 +312,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(ellipse at top left, rgba(201, 99, 50, 0.03) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(217, 145, 111, 0.03) 0%, transparent 50%);
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(201, 99, 50, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(217, 145, 111, 0.03) 0%,
+      transparent 50%
+    );
   z-index: 1;
 }
 
@@ -350,7 +356,7 @@
 
 .tratamentos-subtitle {
   font-size: clamp(16px, 3vw, 20px);
-  color: #718096;
+  color: #2d3747;
   margin: 0 auto;
   max-width: 600px;
   line-height: 1.6;
@@ -382,9 +388,7 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
-  box-shadow:
-    0 10px 30px rgba(201, 99, 50, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(201, 99, 50, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 1px solid rgba(226, 232, 240, 0.8);
   position: relative;
@@ -409,8 +413,7 @@
 
 .tratamento-card:hover {
   transform: translateY(-8px);
-  box-shadow:
-    0 20px 50px rgba(201, 99, 50, 0.15),
+  box-shadow: 0 20px 50px rgba(201, 99, 50, 0.15),
     0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -470,7 +473,7 @@
 
 .card-description {
   font-size: 15px;
-  color: #718096;
+  color: #2d3747;
   line-height: 1.6;
   margin: 0;
 }
@@ -534,9 +537,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
   z-index: 1;
 }
 
@@ -615,7 +625,7 @@
   }
 
   .card-badge {
-    margin-left: 20px
+    margin-left: 20px;
   }
 
   .tratamentos-grid {

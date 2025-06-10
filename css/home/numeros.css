@@ -77,8 +77,14 @@
 
 /* Nova Seção Atuação em Números - Design Premium Melhorado */
 .atuacao-numeros-section {
-  background:
-    linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #c96332 50%, #d9916f 75%, #f8fafc 100%);
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #ffffff 25%,
+    #c96332 50%,
+    #d9916f 75%,
+    #f8fafc 100%
+  );
   color: #2d3748;
   padding: 80px 0;
   position: relative;
@@ -95,9 +101,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(93, 140, 161, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(93, 140, 161, 0.08) 0%, transparent 50%),
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(93, 140, 161, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(93, 140, 161, 0.08) 0%,
+      transparent 50%
+    ),
     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%);
   background-size: 200px 200px, 300px 300px, 30px 30px, 30px 30px;
@@ -107,7 +120,6 @@
 }
 
 @keyframes subtle-float {
-
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -134,12 +146,24 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    radial-gradient(ellipse at top left, rgba(93, 140, 161, 0.12) 0%, transparent 40%),
-    radial-gradient(ellipse at bottom right, rgba(61, 80, 95, 0.15) 0%, transparent 40%),
-    linear-gradient(90deg, transparent 0%, rgba(93, 140, 161, 0.03) 50%, transparent 100%),
-    linear-gradient(0deg, rgba(26, 35, 50, 0.4) 0%, transparent 20%, transparent 80%, rgba(26, 35, 50, 0.4) 100%);
-  z-index: 1;
+  background: radial-gradient(
+      ellipse at top left,
+      rgb(213 100 6) 0%,
+      #9e460f57 40%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgb(221 71 16 / 89%) 0%,
+      #71462f42 40%
+    ),
+    linear-gradient(90deg, #99664be3 0%, rgb(98 55 31 / 41%) 50%, #783d09 100%),
+    linear-gradient(
+      0deg,
+      rgb(255 115 0) 0%,
+      #8b4424 20%,
+      #ad5021 80%,
+      rgb(107 67 49 / 65%) 100%
+    );
 }
 
 .atuacao-numeros-container {
@@ -156,16 +180,21 @@
 
 /* Adicionar um overlay sutil para melhor legibilidade */
 .atuacao-numeros-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -20px;
   left: -20px;
   right: -20px;
   bottom: -20px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 50%, rgba(255, 255, 255, 0.02) 100%);
+  /* background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border-radius: 20px;
   z-index: -1;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px); */
 }
 
 .atuacao-numeros-content {
@@ -188,7 +217,7 @@
 }
 
 .atuacao-numeros-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: 0;
@@ -214,7 +243,7 @@
 }
 
 .numero-principal-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10px;
   left: -10px;
@@ -264,7 +293,7 @@
 }
 
 .meus-numeros-formacao::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -672,13 +701,17 @@
   }
 
   .formacao-academica-lista::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(93, 140, 161, 0.6), rgba(93, 140, 161, 0.2));
+    background: linear-gradient(
+      90deg,
+      rgba(93, 140, 161, 0.6),
+      rgba(93, 140, 161, 0.2)
+    );
     top: -1px;
   }
 
@@ -701,7 +734,7 @@
   }
 
   .formacao-academica-lista li:before {
-    content: '▸';
+    content: "▸";
     position: absolute;
     left: 0;
     top: 0;

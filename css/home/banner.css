@@ -1,5 +1,5 @@
 .background-banner {
-  background-image: url(/img/banner/bannermobile2.png);
+  background-image: url(/img/banner/bannermobile.png);
   padding: 0px 0px 51px 0px;
   background-position: center;
   background-size: cover;
@@ -213,7 +213,7 @@
     width: auto;
     align-items: center;
     background-position: top;
-    background-image: url(/img/banner/bannerdesck2.png);
+    background-image: url(/img/banner/bannerdesk.png);
     background-size: cover;
   }
 
