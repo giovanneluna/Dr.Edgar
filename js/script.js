@@ -46,6 +46,36 @@ function toggleFaq(element) {
   }
 }
 
+// === FORÇA RENDERIZAÇÃO PARA iOS ===
+function forceIOSRender() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+
+  if (isIOS) {
+    console.log("🔄 Força renderização para iOS...")
+
+    // Forçar repaint dos elementos críticos
+    const criticalElements = document.querySelectorAll(
+      ".container-section-especialidade-premium, .especialidade-premium-card, .especialidade-badge"
+    )
+
+    criticalElements.forEach((element) => {
+      if (element) {
+        // Força repaint
+        const originalDisplay = element.style.display
+        element.style.display = "none"
+        element.offsetHeight // trigger reflow
+        element.style.display = originalDisplay
+      }
+    })
+
+    // Força reflow geral
+    document.body.style.transform = "translateZ(0)"
+    setTimeout(() => {
+      document.body.style.transform = ""
+    }, 50)
+  }
+}
+
 // Função para adicionar efeito de smooth scroll aos links
 function initSmoothScroll() {
   const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]')
@@ -192,6 +222,13 @@ function initMobileFixes() {
     // Adicionar classe para iOS
     if (isIOS) {
       document.body.classList.add("ios-device")
+      document.documentElement.classList.add("ios-device")
+
+      // Marcar como carregado após um breve delay para força renderização
+      setTimeout(() => {
+        document.body.classList.add("loaded")
+        console.log("✅ iOS device loaded and rendering optimized")
+      }, 100)
     }
 
     // Verificar suporte a AVIF
@@ -345,4 +382,9 @@ window.addEventListener("load", () => {
   initInfographics()
   initMobileFixes() // Adicionar correções mobile
   checkFontLoading() // Verificar carregamento de fontes
+
+  // Força renderização específica para iOS após carregamento completo
+  setTimeout(() => {
+    forceIOSRender()
+  }, 200)
 })

@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
   <title>Dr. Edgar Oliveira Sarmento - Urologista e Andrologista</title>
   <meta name="description"
     content="Dr. Edgar Oliveira Sarmento - Urologista e Andrologista especializado em saúde masculina em Brasília." />
   <meta name="theme-color" content="#c96332">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +31,34 @@
   <script>
     document.documentElement.classList.add("js");
 
-    if (/iPhone|iPad|iPod|Safari/i.test(navigator.userAgent)) {
+    // Detecção aprimorada de iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]"
+    })(!window["safari"] || (typeof safari !== "undefined" && safari.pushNotification));
+
+    if (isIOS || isSafari) {
+      // Adicionar classe para iOS
+      document.documentElement.classList.add("ios-device");
+      document.body.classList.add("ios-device");
+
+      // Corrigir altura do viewport para iOS
+      function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+
+      setVH();
+      window.addEventListener('resize', setVH);
+      window.addEventListener('orientationchange', () => {
+        setTimeout(setVH, 100);
+      });
+
+      // Aplicar fonte com fallback robusto
       document.fonts.ready.then(function () {
         document.body.style.fontFamily = '"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      }).catch(function () {
+        document.body.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
       });
     }
   </script>
