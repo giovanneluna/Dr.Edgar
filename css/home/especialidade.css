@@ -181,28 +181,36 @@
 }
 
 /* Seção de imagens gerais */
-.containter-img-geral {
+.container-img-geral {
   background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
 }
 
-.containter-img-geral h1 {
+.container-img-geral h1 {
   color: var(--primary-color);
   font: 300 28px/42px inherit;
-  margin: 30px 20px 20px;
+  margin: 0 0 30px 0;
   text-align: center;
+  max-width: 800px;
 }
 
 .servicosgerais {
   display: none;
+  max-width: 100%;
+  height: auto;
 }
 
 .servicosgerais2 {
   display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 /* Seção premium - Problemas que resolvo */
@@ -582,9 +590,20 @@
 }
 
 @media screen and (min-width: 600px) {
+  .container-img-geral {
+    padding: 60px 20px;
+  }
+
+  .container-img-geral h1 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
   .servicosgerais {
     display: block;
     width: 65%;
+    max-width: 800px;
     margin: 0 auto;
   }
 
@@ -668,7 +687,7 @@
   }
 
   .card-premium-image-container {
-    height: 160px;
+    height: 180px;
   }
 
   .card-premium-content {
@@ -758,5 +777,39 @@
 
   .especialidade-premium-card:hover .card-premium-overlay {
     opacity: 0.3;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .container-section-especialidade-premium {
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .especialidade-premium-card {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .card-premium-image-container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .card-premium-image-container img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: auto;
+  }
+
+  /* Fallback para backdrop-filter em iOS antigo */
+  .especialidade-premium-card {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 }

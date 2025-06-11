@@ -173,16 +173,38 @@ function checkFontLoading() {
 
 // === MOBILE LAYOUT FIXES ===
 function initMobileFixes() {
-  // Detectar se é dispositivo móvel
+  // Detectar se é dispositivo móvel e iOS
   const isMobile = window.innerWidth <= 768
   const isTouch = "ontouchstart" in window
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+  const isSafari =
+    /constructor/i.test(window.HTMLElement) ||
+    (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]"
+    })(
+      !window["safari"] ||
+        (typeof safari !== "undefined" && safari.pushNotification)
+    )
 
   if (isMobile || isTouch) {
+    console.log("📱 Dispositivo móvel detectado:", { isIOS, isSafari })
+
+    // Adicionar classe para iOS
+    if (isIOS) {
+      document.body.classList.add("ios-device")
+    }
+
     // Verificar suporte a AVIF
     checkAvifSupport().then((supportsAvif) => {
       if (!supportsAvif) {
-        console.log("AVIF não suportado, implementando fallbacks...")
-        // Aqui você pode implementar lógica para carregar versões JPG das imagens
+        console.log("⚠️ AVIF não suportado, implementando fallbacks...")
+        // Converter imagens AVIF para JPG
+        const avifImages = document.querySelectorAll('img[src*=".avif"]')
+        avifImages.forEach((img) => {
+          const newSrc = img.src.replace(".avif", ".jpg")
+          console.log("🔄 Convertendo:", img.src, "→", newSrc)
+          img.src = newSrc
+        })
       }
     })
 
@@ -198,12 +220,30 @@ function initMobileFixes() {
       // Garantir que a seção não tenha overflow horizontal
       especialidadeSection.style.overflowX = "hidden"
       especialidadeSection.style.maxWidth = "100%"
+
+      // Correções específicas para iOS
+      if (isIOS) {
+        especialidadeSection.style.transform = "translateZ(0)"
+        especialidadeSection.style.backfaceVisibility = "hidden"
+        especialidadeSection.style.webkitBackfaceVisibility = "hidden"
+      }
     }
 
     if (especialidadeCards.length) {
-      especialidadeCards.forEach((card) => {
+      console.log(
+        `🎴 Processando ${especialidadeCards.length} cards de especialidade`
+      )
+
+      especialidadeCards.forEach((card, index) => {
         // Remover transforms que podem causar problemas em mobile
         card.style.willChange = "auto"
+
+        // Correções específicas para iOS
+        if (isIOS) {
+          card.style.transform = "translateZ(0)"
+          card.style.backfaceVisibility = "hidden"
+          card.style.webkitBackfaceVisibility = "hidden"
+        }
 
         // Otimizar imagens para mobile
         const cardImage = card.querySelector(
@@ -211,14 +251,46 @@ function initMobileFixes() {
         )
         if (cardImage) {
           cardImage.style.transform = "none"
-          cardImage.loading = "lazy"
 
-          // Adicionar listener para erro de carregamento
+          // Remover lazy loading para iOS
+          if (isIOS) {
+            cardImage.removeAttribute("loading")
+            cardImage.style.display = "block"
+            cardImage.style.visibility = "visible"
+            cardImage.style.opacity = "1"
+          }
+
+          // Adicionar listener para erro de carregamento aprimorado
           cardImage.addEventListener("error", function () {
-            console.log("Erro ao carregar imagem:", this.src)
-            this.style.backgroundColor = "#f0f0f0"
-            this.style.minHeight = "160px"
+            console.log("❌ Erro ao carregar imagem:", this.src)
+
+            // Tentar diferentes formatos
+            if (this.src.includes(".avif")) {
+              console.log("🔄 Tentando carregar versão JPG...")
+              this.src = this.src.replace(".avif", ".jpg")
+            } else if (this.src.includes(".webp")) {
+              console.log("🔄 Tentando carregar versão JPG...")
+              this.src = this.src.replace(".webp", ".jpg")
+            } else {
+              console.log("📦 Aplicando placeholder...")
+              // Mostrar placeholder
+              this.style.backgroundColor = "#f0f0f0"
+              this.style.minHeight = "160px"
+              this.style.display = "flex"
+              this.style.alignItems = "center"
+              this.style.justifyContent = "center"
+              this.style.color = "#999"
+              this.style.fontSize = "14px"
+              this.alt = "Imagem não disponível"
+            }
           })
+
+          // Forçar carregamento para iOS
+          if (isIOS) {
+            cardImage.addEventListener("load", function () {
+              console.log(`✅ Imagem ${index + 1} carregada com sucesso`)
+            })
+          }
         }
 
         // Melhorar touch interaction
@@ -243,6 +315,26 @@ function initMobileFixes() {
     window.addEventListener("orientationchange", () => {
       setTimeout(updateVH, 100)
     })
+
+    // Força reflow para iOS após um delay
+    if (isIOS) {
+      setTimeout(() => {
+        console.log("🔄 Forçando reflow para iOS...")
+        if (especialidadeSection) {
+          especialidadeSection.style.display = "none"
+          especialidadeSection.offsetHeight // Força reflow
+          especialidadeSection.style.display = "block"
+
+          // Verificar se os cards estão visíveis
+          setTimeout(() => {
+            const visibleCards = document.querySelectorAll(
+              '.especialidade-premium-card:not([style*="display: none"])'
+            )
+            console.log(`👀 Cards visíveis após reflow: ${visibleCards.length}`)
+          }, 100)
+        }
+      }, 500)
+    }
   }
 }
 

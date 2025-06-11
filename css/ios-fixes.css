@@ -1,0 +1,205 @@
+/* === CORREÇÕES ESPECÍFICAS PARA iOS === */
+
+/* Detecção de iOS */
+@supports (-webkit-touch-callout: none) {
+
+  /* Correções gerais para iOS */
+  body.ios-device {
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Correções para a seção de especialidades */
+  .container-section-especialidade-premium {
+    /* Força renderização por hardware */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Remove backdrop-filter que pode causar problemas */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Correções para os cards */
+  .especialidade-premium-card {
+    /* Força renderização por hardware */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Background sólido como fallback */
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+
+    /* Remove will-change que pode causar problemas */
+    will-change: auto !important;
+  }
+
+  /* Correções para imagens */
+  .card-premium-image-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .card-premium-image-container img {
+    /* Remove transforms que podem falhar */
+    -webkit-transform: none !important;
+    transform: none !important;
+
+    /* Força renderização */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Remove lazy loading */
+    loading: auto !important;
+
+    /* Garante visibilidade */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Remove hover effects em dispositivos touch */
+  .especialidade-premium-card:hover {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .especialidade-premium-card:hover .card-premium-image-container img {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+
+  /* Correções para grid */
+  .especialidade-premium-grid {
+    /* Remove contain que pode causar problemas */
+    contain: none !important;
+  }
+
+  /* Correções para fontes */
+  .container-section-especialidade-premium *,
+  .especialidade-premium-header *,
+  .especialidade-premium-card *,
+  .card-premium-content * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-display: swap !important;
+  }
+
+  /* Correções para textos que podem não aparecer */
+  .card-premium-title,
+  .card-premium-subtitle,
+  .card-premium-description,
+  .especialidade-premium-title,
+  .especialidade-premium-subtitle {
+    /* Força renderização de texto */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    /* Garante visibilidade */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+
+    /* Remove text-fill-color que pode causar problemas */
+    -webkit-text-fill-color: unset !important;
+    color: inherit !important;
+  }
+
+  /* Específico para títulos com gradient */
+  .highlight-especialidade {
+    /* Fallback para gradients que podem não funcionar */
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+  }
+
+  /* Correções para ícones emoji */
+  .icon-circle span {
+    /* Força renderização de emoji */
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    display: block !important;
+  }
+
+  /* Correções para botões */
+  .card-premium-button {
+    /* Remove transforms que podem causar problemas */
+    -webkit-transform: none !important;
+    transform: none !important;
+
+    /* Força renderização */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    /* Garante interação touch */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+/* Específico para iPhone (telas menores que 768px e iOS) */
+@media screen and (max-width: 768px) {
+  @supports (-webkit-touch-callout: none) {
+    .especialidade-premium-card {
+      /* Máxima compatibilidade para mobile iOS */
+      width: 100% !important;
+      max-width: 400px !important;
+      margin: 0 auto 25px auto !important;
+    }
+
+    .card-premium-image-container {
+      height: 180px !important;
+      overflow: hidden !important;
+    }
+
+    .card-premium-image-container img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+    }
+
+    .card-premium-content {
+      padding: 25px 20px !important;
+      text-align: center !important;
+    }
+
+    .card-premium-icon {
+      position: static !important;
+      margin: 0 auto 20px auto !important;
+    }
+  }
+}
+
+/* Debug para desenvolvimento - remover em produção */
+.debug-ios {
+  border: 2px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+/* Força carregamento de imagens JPG como fallback */
+img[src*=".avif"] {
+  background-color: #f0f0f0;
+  min-height: 160px;
+}
+
+/* Animações mais suaves para iOS */
+@supports (-webkit-touch-callout: none) {
+  * {
+    -webkit-animation-duration: 0.3s !important;
+    animation-duration: 0.3s !important;
+    -webkit-transition-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+}
