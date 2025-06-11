@@ -24,44 +24,9 @@
 
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/ios-fixes.css">
 
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
 
-  <script>
-    document.documentElement.classList.add("js");
-
-    // Detecção aprimorada de iOS
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {
-      return p.toString() === "[object SafariRemoteNotification]"
-    })(!window["safari"] || (typeof safari !== "undefined" && safari.pushNotification));
-
-    if (isIOS || isSafari) {
-      // Adicionar classe para iOS
-      document.documentElement.classList.add("ios-device");
-      document.body.classList.add("ios-device");
-
-      // Corrigir altura do viewport para iOS
-      function setVH() {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      }
-
-      setVH();
-      window.addEventListener('resize', setVH);
-      window.addEventListener('orientationchange', () => {
-        setTimeout(setVH, 100);
-      });
-
-      // Aplicar fonte com fallback robusto
-      document.fonts.ready.then(function () {
-        document.body.style.fontFamily = '"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-      }).catch(function () {
-        document.body.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-      });
-    }
-  </script>
 </head>
 
 <body>
@@ -116,13 +81,13 @@
                   </figure>
                 </a>
               </li>
-              <button class="button-header" id="butto-header2">
-                <li>
+              <li>
+                <button class="button-header" id="button-header2">
                   <a
                     href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento.">Agendar
                     Consulta</a>
-                </li>
-              </button>
+                </button>
+              </li>
             </ul>
           </nav>
         </section>
@@ -192,24 +157,24 @@
         <span class="span-profissao">
           Formação profissional
         </span>
-        <h2> <span class="negrito">
-            Dr. Edgar Oliveira Sarmento
+        <h2><span class="negrito">Dr. Edgar Oliveira Sarmento</span></h2>
 
-            <p id="text-conheca">
-              Sou Edgar Oliveira Sarmento, homem (02/05/88), casado desde 2018 com Gabriela (30/06/91), e temos dois
-              filhos: Rodrigo (25/07/22) e Rafael (25/05/24); cristão e prezo o Estoicismo e Essencialismo.
-              <br> <br>
-              Sou médico com atuação na Andrologia, formado em 2012 pela Universidade Federal da Bahia, e
-              especializações em Cirurgia Geral e Urologia, além de pós-graduações e subespecializações em cirurgia
-              minimamente invasiva, cirurgia robótica, Andrologia e procedimentos em estética íntima masculina.
-              <br><br>
-              No consultório, emprego o conceito de que "Alta performance começa com autoperformance", o que só pode ser
-              alcançado através da mudança de hábitos.
-            </p>
-            <button class="botao-pulse">
-              <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
-                target="_blank">Agendar consulta</a>
-            </button>
+        <p id="text-conheca">
+          Sou Edgar Oliveira Sarmento, homem (02/05/88), casado desde 2018 com Gabriela (30/06/91), e temos dois
+          filhos: Rodrigo (25/07/22) e Rafael (25/05/24); cristão e prezo o Estoicismo e Essencialismo.
+          <br> <br>
+          Sou médico com atuação na Andrologia, formado em 2012 pela Universidade Federal da Bahia, e
+          especializações em Cirurgia Geral e Urologia, além de pós-graduações e subespecializações em cirurgia
+          minimamente invasiva, cirurgia robótica, Andrologia e procedimentos em estética íntima masculina.
+          <br><br>
+          No consultório, emprego o conceito de que "Alta performance começa com autoperformance", o que só pode ser
+          alcançado através da mudança de hábitos.
+        </p>
+
+        <button class="botao-pulse">
+          <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
+            target="_blank">Agendar consulta</a>
+        </button>
       </div>
     </div>
 
@@ -237,14 +202,7 @@
                 Tratamentos individualizados para <strong>disfunção erétil</strong> e melhora da resposta sexual, com
                 resultados rápidos e efetivos.
               </p>
-              <!-- <button class="infographic-button"
-                onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para confiança e desempenho com o Dr. Edgar Oliveira Sarmento.', '_blank')">
-                <span>Saiba mais</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button> -->
+
             </div>
           </div>
 
@@ -258,14 +216,7 @@
                 Estratégias personalizadas de <strong>reposição hormonal</strong>, otimizando os níveis de testosterona
                 para mais disposição, força e vitalidade.
               </p>
-              <!-- <button class="infographic-button"
-                onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para vigor e energia com o Dr. Edgar Oliveira Sarmento.', '_blank')">
-                <span>Saiba mais</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button> -->
+
             </div>
           </div>
 
@@ -279,14 +230,6 @@
                 Especialista em <strong>preenchimento peniano com ácido hialurônico</strong>, um procedimento seguro e
                 eficaz para homens que desejam melhorar sua confiança.
               </p>
-              <!-- <button class="infographic-button"
-                onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre tratamentos para força e presença com o Dr. Edgar Oliveira Sarmento.', '_blank')">
-                <span>Saiba mais</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button> -->
             </div>
           </div>
         </div>
@@ -308,7 +251,7 @@
       </div>
 
       <div class="especialidade-premium-grid">
-        <div class="especialidade-premium-card" data-category="sexual">
+        <div class="especialidade-premium-card">
           <div class="card-premium-image-container">
             <img src="img/nossosTratamentos/queixasSexuais.jpg" alt="Queixas sexuais - Dr. Edgar Oliveira Sarmento"
               onerror="this.style.backgroundColor='#f0f0f0'; this.style.minHeight='160px';">
@@ -326,18 +269,18 @@
               <strong>Tratamento especializado</strong> para problemas sexuais utilizando <strong>técnicas avançadas e
                 personalizadas</strong> para cada caso específico.
             </p>
-            <button class="card-premium-button"
-              onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento.', '_blank')">
+            <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
+              target="_blank" class="card-premium-button">
               <span>Saiba mais</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
-        <div class="especialidade-premium-card" data-category="estetica">
+        <div class="especialidade-premium-card">
           <div class="card-premium-image-container">
             <img src="img/nossosTratamentos/desconfortoSexual.jpg" alt="Estética genital - Dr. Edgar Oliveira Sarmento"
               onerror="this.style.backgroundColor='#f0f0f0'; this.style.minHeight='160px';">
@@ -355,18 +298,18 @@
               Tratamentos para melhoria da estética genital com <strong>abordagem multidisciplinar</strong>, visando
               melhorar a autoestima e satisfação pessoal.
             </p>
-            <button class="card-premium-button"
-              onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento.', '_blank')">
+            <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
+              target="_blank" class="card-premium-button">
               <span>Saiba mais</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
-        <div class="especialidade-premium-card" data-category="hormonal">
+        <div class="especialidade-premium-card">
           <div class="card-premium-image-container">
             <img src="img/nossosTratamentos/reposicaoHormonal.jpg"
               alt="Reposição de testosterona - Dr. Edgar Oliveira Sarmento"
@@ -385,17 +328,18 @@
               <strong>Diagnóstico e tratamento</strong> de deficiência hormonal com foco na <strong>identificação da
                 causa e intervenção adequada</strong> para restaurar a qualidade de vida.
             </p>
-            <button class="card-premium-button"
-              onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento.', '_blank')">
+            <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
+              target="_blank" class="card-premium-button">
               <span>Saiba mais</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-            </button>
+              </svg>
+            </a>
           </div>
         </div>
 
-        <div class="especialidade-premium-card" data-category="performance">
+        <div class="especialidade-premium-card">
           <div class="card-premium-image-container">
             <img src="img/nossosTratamentos/criacaoHabitos.jpg"
               alt="Criação e otimização de hábitos - Dr. Edgar Oliveira Sarmento"
@@ -414,13 +358,14 @@
               Estratégias personalizadas para otimização de hábitos e melhoria da performance geral, realizados com
               <strong>técnicas modernas e individualizadas</strong>.
             </p>
-            <button class="card-premium-button"
-              onclick="window.open('https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento.', '_blank')">
+            <a href="https://wa.me/5561996065036?text=Olá, vim pelo site e gostaria de saber mais sobre a consulta do Dr. Edgar Oliveira Sarmento."
+              target="_blank" class="card-premium-button">
               <span>Saiba mais</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-            </button>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -577,6 +522,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Especializado</div>
               </div>
@@ -592,6 +538,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -602,6 +549,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Inovador</div>
               </div>
@@ -617,6 +565,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -627,6 +576,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Diagnóstico</div>
               </div>
@@ -642,6 +592,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -652,6 +603,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Hormonal</div>
               </div>
@@ -667,6 +619,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -680,6 +633,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Cirúrgico</div>
               </div>
@@ -695,6 +649,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -705,6 +660,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Estético</div>
               </div>
@@ -720,6 +676,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -730,6 +687,7 @@
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
                       fill="currentColor" />
+                  </svg>
                 </div>
                 <div class="card-badge">Terapêutico</div>
               </div>
@@ -745,6 +703,7 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
